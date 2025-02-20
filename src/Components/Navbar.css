@@ -1,0 +1,97 @@
+.navbar{
+    background-color: white;
+    box-shadow: 1px 0px 20px rgba(174, 174, 174, 0.582);
+}
+.Logo{
+    padding: 2px;
+}
+.Logo img{
+
+    width: 155px ;
+    height: 60px ;
+}
+
+.Home{
+    font-size: 20px !important;
+    text-decoration: none;
+    font-weight: 660 !important;
+    color: rgb(21, 21, 21) !important;
+    padding: 6px 14px !important;
+}
+.Home:hover{
+    padding: 6px 14px !important;
+    background-color: rgb(224, 245, 253) !important;
+    border-radius: 4px !important;
+}
+.loginBlock{
+    width: 300px;
+    height: 70px;
+    margin-right: 30px;
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.loginBg{
+    background-color: rgb(0, 186, 242);
+    width: max-content;
+    border-radius: 50px !important;
+    padding: 3px 3px 3px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+    position: relative !important;
+}
+.loginBg h3{
+    color: white;
+    padding-top: 4px !important;
+    font-size:16px !important;
+}
+.login,.signup{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.active{
+    color: blue !important;
+}
+.imgbg{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(0, 41, 112);
+}
+.divline{
+    width: 1px;
+    height: 30px;
+    background-color: rgb(33, 33, 33);
+}
+.logoutblock{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 160px;
+    /* height: 70px; */
+    padding: 15px 0px 20px 0px;
+    
+    background-color: rgb(234, 234, 234);
+    border-radius: 10px;
+    border: 1px solid rgba(162, 162, 162, 0.425);
+    box-shadow: 1px 0px 20px rgba(133, 133, 133, 0.582);
+    z-index: 100;
+    display: none;
+}
+.logoutname{
+    font-size: 18px;
+    color: rgb(27, 27, 27);
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.usernames{
+    color: white;
+    font-weight: 600;
+}

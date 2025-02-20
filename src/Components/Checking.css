@@ -1,0 +1,57 @@
+.checking{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conformtext{
+    font-size: 30px;
+    font-weight: 700;
+}
+.card{
+    border: 2px solid rgb(255, 255, 255) !important;
+    width: 400px;
+    height:370px;
+}
+.ckecked{
+    width: 400px;
+    height: 80px;
+    cursor: pointer;
+}
+.form-check-input {
+    border: 2px solid rgb(0, 186, 242) !important; 
+}
+.form-check-input:hover {
+    border-color: blue !important;
+}
+.form-check-input:checked {
+    background-color: green !important;
+    border-color: green !important;
+}
+.confirmbtn,.confirmbtn1{
+    margin: 40px;
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background-color: rgb(0, 186, 242);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+.confirmbtn1{
+    background-color: rgb(166, 234, 255);
+}
+
+@media screen and (max-width:500px) {
+    .conformtext{
+        font-size: 25px;
+    }
+    .card{
+        width: 350px;
+        height:370px;
+    }
+    .ckecked{
+        width: 350px;
+    }
+}

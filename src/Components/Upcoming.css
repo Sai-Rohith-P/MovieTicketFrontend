@@ -1,0 +1,24 @@
+.upcoming{
+    width: 100%;
+    margin-bottom: 55px;
+}
+.upcominglist{
+    padding: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+}
+.movieslistupcoming{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.viewall{
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(41, 209, 250);
+}

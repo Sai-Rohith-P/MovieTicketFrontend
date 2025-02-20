@@ -1,0 +1,185 @@
+.successpage{
+    width: 100%;
+    /* height:100vh; */
+    background-color: rgb(234, 234, 234);
+}
+.toplogo{
+    width: 100%;
+    padding: 11px 0px;
+    background-color: white;
+}
+.msg{
+    margin: auto;
+    width: 60%;
+    padding: 10px 0px 20px 0px;
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.thanksmsg{
+    width: 80%;
+    border: 2px solid rgba(179, 179, 179, 0.532);
+    background-color: rgb(215, 237, 208);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 22px;
+}
+.thanksmsg img{
+    filter: invert(1);
+    filter: invert(50%) sepia(30%) saturate(500%) hue-rotate(100deg);
+    border: 3px solid rgb(74, 160, 118); 
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 7px;
+}
+.thanksmsg h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(74, 160, 118);
+}
+.mainmoviedetails{
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 14px;
+}
+.imgimgdiv{
+    width: max-content;
+}
+.imgimgdiv img{
+    width: 130px;
+    border-radius: 3px;
+    height: 180px;
+}
+.imgcontentdiv{
+    padding: 20px;
+    width: 100%;
+}
+.data{
+    font-size: 16px;
+    width: 70%;
+    color: rgba(119, 119, 119, 0.986);
+}
+.mnm{
+    font-size: 23px;
+    font-weight: 700;
+}
+.quantity{
+    margin-top: -5px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.seatssdiv{
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+.chair{
+    width: 34px;
+    height: 34px;
+    filter: invert(0.7);
+}
+.seatsnms{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(74, 160, 118);
+}
+.theaternm{
+    font-size: 15px;
+    margin-top: -4px;
+    color: rgba(119, 119, 119, 0.986);
+    font-weight: 500;
+}
+.pricedivtop{
+    width: 100%;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.divextra{
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+.top h4,.divextra h4{
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+}
+.top p,.divextra p{
+    font-size: 16px;
+    color: rgba(119, 119, 119, 0.986);
+    font-weight: 500;
+}
+.tickets{
+margin-top: -22px;
+font-size: 14px;
+color: rgba(119, 119, 119, 0.986);
+}
+.fees{
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    color: rgba(119, 119, 119, 0.986);
+}
+.amountpaid{
+    font-weight: 700 !important;
+    color: black !important;
+    font-size: 19px !important;
+}
+.price{
+    font-size: 27px !important;
+    color: black !important;
+}
+.goback{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(0, 186, 242);
+    border-radius: 30px;
+    padding: 11px 29px;
+    border: none;
+    outline: none;
+}
+@media screen and (max-width:992px) {
+    .msg{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .mainmoviedetails{
+        width: 95%;
+    }
+}
+@media screen and (max-width:576px) {
+    .mainmoviedetails{
+        display: flex;
+        flex-direction: column;
+    }
+    .data{
+        width: 95%;
+    }
+    .thanksmsg h3{
+        font-size: 20px;
+    }
+    .thanksmsg img{
+        width: 40px;
+        height: 40px;
+    }
+    .successpage{
+        height:110vh;
+    }
+}
+@media screen and (max-width:430px) {
+    .thanksmsg h3{
+        font-size: 18px;
+    }
+    .imgcontentdiv{
+        padding: 10px 0px;
+    }
+}

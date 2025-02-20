@@ -1,0 +1,180 @@
+.Moviedetaildown{
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+    padding-bottom: 40px;
+}
+.topdates{
+    width: 100%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.filterby{
+    font-size: 18px;
+    color: black;
+}
+.options{
+    margin-left: 20px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding:0px  10px;
+    border-radius: 5px;
+    /* background-color: rgb(224, 245, 253);
+    border: 1px solid rgb(143, 223, 255); */
+    border: 1px solid rgba(179, 179, 179, 0.445);
+}
+.datesdiv{
+    width: 30%;
+    display: flex;
+    gap: 10px;
+}
+.datesnums{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.datesnums p{
+    font-size: 13px;
+    margin-top: 4px;
+}
+.datesnums h5{
+    margin-top: -17px;
+    font-size: 16px;
+}
+.monthdate {
+    cursor: pointer;
+    writing-mode: vertical-lr; 
+    font-size: 12px;
+    font-weight: 600;
+    height: 50px;
+    color: white;
+    text-align: center;
+    background-color: rgb(144, 144, 144);
+    transform: rotate(180deg);
+    border-radius: 3px;
+}
+.moviedetails{
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.serachtheater{
+    padding-top: 10px;
+    width: 100%;
+}
+.theaters{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.theatersleft{
+    width: 40%;
+}
+.theatersright{
+    width: 60%;
+    
+}
+.nametheater{
+    font-size: 22px;
+    font-weight: 600;
+}
+.aircondition ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style-type: square;
+}
+.aircondition ul li{
+    font-size: 15px;
+    color: grey;
+}
+.getdirection{
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(124, 124, 124, 0.591);
+    width: max-content;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+.direction{
+    width: 20px;
+    height: 20px;
+    filter: invert(0.7);
+    margin-right: 10px;
+}
+.time{
+    font-size: 21px;
+    font-weight: 700;
+    color: rgb(33, 192, 120);
+    padding: 15px 20px;
+    border: 1px solid rgba(210, 210, 210, 0.655);
+    border-radius: 10px;
+    width: max-content;
+    cursor: pointer;
+}
+.timedivv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.characterslist{
+    width: 100%;
+    padding: 10px;
+}
+.moviename{
+    font-size: 19px;
+    font-weight: 700;
+}
+.persons{
+    width: max-content;
+    display:flex ;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.persons img{
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+}
+.persons p{
+    font-size: 16px;
+    font-weight: 600;
+}
+@media screen and (max-width:768px) {
+    .theaters{
+       flex-direction: column;
+    }
+    .theatersleft,.theatersright{
+        width: 100%;
+    }
+    .timedivv{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .topdates{
+        flex-direction: column;
+        align-items: start;
+    }
+    .datesdiv{
+        width: 100%;
+    }
+}

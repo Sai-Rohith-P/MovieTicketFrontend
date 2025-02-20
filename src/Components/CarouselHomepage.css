@@ -1,0 +1,96 @@
+ .carouselType{
+    background-color: rgb(234, 234, 234);
+    /* height: 250px; */
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
+    background-color:transparent;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.imageslist {
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    gap:30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.imageslist::-webkit-scrollbar {
+    display: none;
+}
+
+.imageslist img {
+    width: 62%; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+.arrowbg1{
+    background-color: rgb(255, 255, 255);
+    padding: 9px 11px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-btn {
+    left: 150px;
+}
+.prev-btn img{
+    padding-left:3px;
+    padding-bottom: 3px;
+}
+.next-btn {
+    right: 150px;
+}
+.next-btn img{
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+}
+.arrowbg1 img{
+    width: 20px;
+    height:20px;
+    filter: invert(0.7);
+}
+
+@media screen and (max-width:992px) {
+    .imageslist img {
+        width: 100%;
+        height: 220px; 
+    }
+}
+@media screen and (max-width:768px) {
+    .prev-btn {
+        left: 100px;
+    }
+    .next-btn {
+        right: 100px;
+    }
+}
+@media screen and (max-width:576px) {
+    .prev-btn {
+        left: 40px;
+    }
+    .next-btn {
+        right: 40px;
+    }
+    .imageslist img {
+        width: 150%;
+        height: 220px; 
+    }
+}

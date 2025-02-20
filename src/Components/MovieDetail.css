@@ -1,0 +1,110 @@
+.moviedetail{
+    margin-top: 10px;
+    width: 100%;
+    padding: 30px 0px 20px 0px;
+    /* border: 2px solid rgb(155, 155, 155); */
+    background-color: white;
+}
+.topdiv{
+justify-content: space-between;
+}
+
+.moviedetailtext img{
+    width: 160px;
+    height: 220px;
+    border-radius: 20px;
+}
+.moviedetailtext h4{
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.moviedetailtext p{
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: grey;
+}
+.Trailer{
+    margin-top: 20px;
+    font-size: 18px !important;
+    padding: 7px 18px;
+    border-radius: 20px;
+    width: max-content;
+    background-color: rgb(1, 42, 114);
+    cursor: pointer;
+    color: white;
+}
+.videologo img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.topdown{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.likediv{
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.Like{
+    margin: auto;
+    color: grey;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(128, 128, 128, 0.689);
+    border-radius: 20px;
+    padding: 4px 13px;
+    cursor: pointer;
+}
+.like img{
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    filter: invert(0.5);
+}
+.percentage{
+    font-size: 17px;
+    font-weight: 700;
+    width: max-content;
+    margin-bottom: 0px;
+}
+.liked{
+    font-size: 12px;
+    color: grey;
+}
+.heart img{
+    width: 20px;
+    height: 20px;
+    filter: invert(24%) sepia(98%) saturate(7494%) hue-rotate(356deg) brightness(96%) contrast(106%);
+}
+
+@media screen and (max-width:992px) {
+    .topdown{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .likediv{
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+    .locationdiv{
+        margin-left: auto;
+    }
+}
+@media screen and (max-width:390px) {
+    .topdiv{
+        flex-direction: column-reverse;
+    }
+}

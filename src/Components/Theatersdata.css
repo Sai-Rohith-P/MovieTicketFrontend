@@ -1,0 +1,123 @@
+.theatersList{
+    width: 100%;
+    /* height:220px; */
+    padding: 50px 40px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.theatersListdiv{
+    width: 80%;
+    /* height: 220px; */
+    /* border: 2px solid grey; */
+}
+.heartdiv{
+    display: flex;
+    align-items: center;
+    gap: 20px1;
+}
+.heart{
+    width: 30px;
+    height: 30px;
+}
+.directiondiv{
+    width: 20%;
+    /* height: 220px; */
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.theatersListdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.directiondiv h4{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0, 186, 242);
+    cursor: pointer;
+}
+.theateraddress{
+    font-size: 18px;
+    color: grey;
+    margin-top: 5px;
+}
+.thearetrname{
+    font-size: 31px;
+    font-weight: 700;
+}
+.directionn{
+    width: 20px;
+    height: 20px;
+    filter: invert(61%) sepia(86%) saturate(2656%) hue-rotate(162deg) brightness(96%) contrast(95%);
+    margin-right:4px;
+}
+
+.moviess{
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+    padding-bottom: 10px;
+}
+.movi{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+.moviright{
+    width: 60%;
+    padding: 10px;
+}
+.movileft{
+    padding: 10px;
+    width: 40%;
+}
+.language{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.img11{
+    width: 100px;
+    height: 140px;
+    border-radius: 10px;
+}
+.imgtext h5{
+    font-size: 18px;
+    font-weight: 700;
+}
+.imgtext p{
+    font-size: 14px;
+    color: grey;
+}
+.latestMovies{
+    font-size: 22px;
+    font-weight: 700;
+}
+.movienameslistt{
+    font-size: 16px;
+}
+.movienms{
+    color: rgb(0, 176, 238);
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .movi{
+        flex-direction: column;
+    }
+    .moviright,.movileft{
+        width: 100%;
+    }
+}
+@media screen and (max-width:576px) {
+    .directiondiv{
+        display: none;
+    }
+    .theatersListdiv{
+        width: 100%;
+    }
+}

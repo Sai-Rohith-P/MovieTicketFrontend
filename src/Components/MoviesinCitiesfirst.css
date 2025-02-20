@@ -1,0 +1,111 @@
+.searchbar{
+    width: 100%;
+    display: flex;
+    padding: 16px 30px;
+}
+.seacrh{
+    width: 70%;
+}
+.line{
+    width: 1px;
+    margin-left: 40px;
+    height: 40px;
+    background-color: grey;
+}
+.locationw{
+    margin-left: 40px;
+}
+.moviesincit{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(234, 234, 234);
+}
+.moviesblock{
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    /* margin-bottom: 100px; */
+}
+.theaternms{
+    font-weight: 700;
+}
+
+.cent{
+    margin: auto;
+width: 95%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.onemovielists{
+    width: 49%;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    border: 1px solid rgba(175, 175, 175, 0.482);
+    cursor: pointer;
+}
+.imgdivhere{
+    width: max-content;
+    padding: 5px;
+}
+.imgdivhere img{
+    width: 70px;
+}
+.matterdivhere{
+padding: 10px;
+}
+.matterdivhere h5{
+    font-size: 20px;
+    font-weight: 700;
+}
+.matterdivhere p{
+    color: grey;
+}
+.rightarrow{
+    margin-left: auto;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+.rightarrow img{
+    width: 20px;
+    height: 20px;
+    filter: invert(0.8);
+}
+.visitbtn{
+    display: flex;
+    width: max-content;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.visi{
+    border: 1px solid rgba(175, 175, 175, 0.482);
+    padding: 1px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.visi img{
+    
+    width: 19px;
+    height: 19px;
+    margin-top: -5px;
+    filter: invert(0.5);
+}
+@media screen and (max-width:992px) {
+    .onemovielists{
+        width: 99%;
+    }
+}
+@media screen and (max-width:768px) {
+    .searchbar{
+        display: none;
+    }
+}
+@media screen and (max-width:490px) {
+    .visitbtn{
+        flex-direction: column;
+    }
+}
