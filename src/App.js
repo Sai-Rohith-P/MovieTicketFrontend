@@ -146,6 +146,9 @@ function App() {
               <Route path='/login' element={<LoginPage />} />
               <Route path='/moviesincities' element={<MoviesInCities />} />
 
+              <Route path='/success' element={<SucessPage />} />
+              <Route path='/cancel' element={<Canc />} />
+
               <Route path="/movieone" element={<EachMovieSetUp />} />
               <Route path="/movieone/theaterone" element={<EachTheaters />} />
               <Route path="/movieone/sitting" element={<SittingArrangeMent />} />
@@ -156,8 +159,7 @@ function App() {
               <Route path="/movieone/theaterone/sitting/checking/success" element={<SucessPage />} /> */}
 
 
-              <Route path='/success' element={<SucessPage />} />
-              <Route path='/cancel' element={<Canc />} />
+
 
             </Routes>
           </Moviesdata.Provider>
