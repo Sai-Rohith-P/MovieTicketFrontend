@@ -59,6 +59,7 @@ function Sitting() {
             alert("plaese login First,Then You Can Book Tickets.")
         } else {
             alert("Thankyou For Booking Tickets.")
+            makePayment()
         }
     }
 
@@ -168,7 +169,7 @@ function Sitting() {
                                 {/* <NavLink to={loginstatus ? "checking" : "#"} style={{ textDecoration: "none" }} onClick={verufingg}><h5>Book Ticket</h5></NavLink> */}
                                 <button class='bookbutton' type={loginstatus ? "button" : "text"} onClick={() => {
                                     verufingg()
-                                    makePayment()
+
                                 }} >Book Ticket</button>
                             </div>
                         </div>
