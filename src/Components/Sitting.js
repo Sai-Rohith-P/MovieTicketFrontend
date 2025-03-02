@@ -65,6 +65,10 @@ function Sitting() {
 
     const makePayment = async () => {
         const stripe = await loadStripe('pk_test_51Qy7BNJJZu6P9NK0YrmTVOyyWli403NQi8licQk2ybNhNhUlQkft3RSSWIc7JYP3SMcyrHVg8ateejFlufTWT3DF00o12zuUdd');
+        if (!stripe) {
+            console.error("Stripe failed to load.");
+            return;
+        }
 
         const body = {
             products: count
@@ -73,22 +77,40 @@ function Sitting() {
         const headers = {
             "Content-type": "application/json"
         }
-        const response = await fetch("https://movieticketbackend-tpdo.onrender.com/movieone/sitting/checking-session", {
-            method: "POST",
-            headers: headers,
-            body: JSON.stringify(body)
-        })
 
-        const session = await response.json();
+        try {
+            // console.log("Sending request to backend:", body);
 
-        const result = stripe.redirectToCheckout({
-            sessionId: session.id
-        });
+            const response = await fetch("https://movieticketbackend-tpdo.onrender.com/movieone/sitting/checking-session", {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(body)
+            });
 
-        if (result.error) {
-            console.log(result.error);
-            window.location.href = "/cancel";
+            const session = await response.json();
+            // console.log("Received session:", session); // Debug the response
+
+            if (!session.id) {
+                // console.error("Stripe session ID is missing:", session);
+                alert("Error: Payment session not created.");
+                return;
+            }
+
+            const result = await stripe.redirectToCheckout({
+                sessionId: session.id
+            });
+
+            if (result.error) {
+                console.log(result.error);
+                window.location.href = "/cancel";
+            }
+
+        } catch (error) {
+            console.error("Error during payment process:", error);
         }
+
+
+
     }
 
     return (
