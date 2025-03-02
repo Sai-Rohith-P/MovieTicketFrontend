@@ -1,0 +1,40 @@
+.paymentpage{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(0, 255, 76); */
+}
+.payment{
+    width: 600px;
+    margin-top: 100px;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+.cancel{
+    font-size: 50px;
+    color: rgb(61, 82, 102);
+}
+.try{
+    font-size: 21px;
+    font-weight: 600;
+    color: grey;
+    margin-top: 30px;
+}
+.spangoto{
+    font-size: 18px !important;
+    color: black !important;
+}
+.imgcancel{
+    width: 400px;
+}
+
+@media screen and (max-width:576px) {
+    .cancel{
+        font-size: 40px;
+    }
+    .imgcancel{
+        width: 360px;
+    }
+    
+}

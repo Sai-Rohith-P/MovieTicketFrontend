@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SuccessFul.css'
 import { NavLink } from 'react-router-dom'
 import logo from '../Asserts/Logo.avif';
@@ -6,15 +6,24 @@ import logo from '../Asserts/Logo.avif';
 import correct from '../Asserts/HomePage/MoviesFilter/correct.svg';
 // import img from '../Asserts/HomePage/MoviesFIlterBlock/img1.avif';
 import chair from '../Asserts/HomePage/MoviesFilter/chair.svg';
-import { Moviesdata } from '../App';
+// import { Moviesdata } from '../App.js';
 function SuccessFul() {
     // const Navigate = useNavigate();
 
-    const { count } = useContext(Moviesdata);
-    // console.log(count);
+    // const { count } = useContext(Moviesdata);
+    const [count, setCount] = useState(null);
+
+    useEffect(() => {
+        const storedData = localStorage.getItem("moviedatadetails");
+        if (storedData) {
+            setCount(JSON.parse(storedData));
+        }
+    }, []);
+
+    console.log(count);
     return (
         <>
-            <div className="successpage">
+            {count ? (<div className="successpage">
                 <div className="toplogo">
                     <div className="container">
                         <div>
@@ -71,7 +80,9 @@ function SuccessFul() {
                     </div>
                     <NavLink to="/"><button className='goback' onClick={() => { alert("Download the Ticket or Take ScreenSort for Safe Mode.") }}>Go Back To HomePage</button></NavLink>
                 </div>
-            </div>
+            </div>) : (
+                <h2>Loading...</h2> // Show this message until `count` is loaded
+            )}
         </>
     )
 }

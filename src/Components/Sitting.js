@@ -2,14 +2,24 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Sitting.css'
 import logo from '../Asserts/Logo.avif';
 import backarrow from '../Asserts/HomePage/MoviesFilter/backarrow.svg';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { Moviesdata } from '../App';
+import { useNavigate } from 'react-router-dom';
+import { Moviesdata } from '../App.js';
+
+import { loadStripe } from '@stripe/stripe-js';
+
 function Sitting() {
     const Navigate = useNavigate();
 
 
     const { moviesittingone, setCount } = useContext(Moviesdata);
     // console.log(moviesittingone);
+    const { count } = useContext(Moviesdata);
+    useEffect(() => {
+        if (count) {
+            localStorage.setItem("moviedatadetails", JSON.stringify(count));
+        }
+    }, [count])
+    console.log(count);
     // console.log(moviesittingone.data.movieimg);
     // console.log(moviesittingone);
 
@@ -49,6 +59,34 @@ function Sitting() {
             alert("plaese login First,Then You Can Book Tickets.")
         } else {
             alert("Thankyou For Booking Tickets.")
+        }
+    }
+
+    const makePayment = async () => {
+        const stripe = await loadStripe('pk_test_51Qy7BNJJZu6P9NK0YrmTVOyyWli403NQi8licQk2ybNhNhUlQkft3RSSWIc7JYP3SMcyrHVg8ateejFlufTWT3DF00o12zuUdd');
+
+        const body = {
+            products: count
+        }
+
+        const headers = {
+            "Content-type": "application/json"
+        }
+        const response = await fetch("https://movieticketbackend-tpdo.onrender.com/movieone/sitting/checking-session", {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(body)
+        })
+
+        const session = await response.json();
+
+        const result = stripe.redirectToCheckout({
+            sessionId: session.id
+        });
+
+        if (result.error) {
+            console.log(result.error);
+            window.location.href = "/cancel";
         }
     }
 
@@ -127,7 +165,11 @@ function Sitting() {
                                 <p>Ticket {selectedCount}X $350</p>
                             </div>
                             <div className='book'>
-                                <NavLink to={loginstatus ? "checking" : "#"} style={{ textDecoration: "none" }} onClick={verufingg}><h5>Book Ticket</h5></NavLink>
+                                {/* <NavLink to={loginstatus ? "checking" : "#"} style={{ textDecoration: "none" }} onClick={verufingg}><h5>Book Ticket</h5></NavLink> */}
+                                <button class='bookbutton' type={loginstatus ? "button" : "text"} onClick={() => {
+                                    verufingg()
+                                    makePayment()
+                                }} >Book Ticket</button>
                             </div>
                         </div>
                     </div></> : <></>}

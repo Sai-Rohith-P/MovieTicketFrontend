@@ -232,11 +232,20 @@
     width: max-content;
     margin: auto;
 }
-.book h5{
+/* .book h5{
     font-size: 17px;
     padding: 18px 83px;
     border-radius: 10px;
     color: white;
+    font-weight: 600;
+    background-color: rgb(0, 184, 245);
+} */
+.bookbutton{
+    font-size: 19px;
+    padding: 13px 63px;
+    border-radius: 10px;
+    color: white;
+    border: none;
     font-weight: 600;
     background-color: rgb(0, 184, 245);
 }

@@ -11,10 +11,12 @@ import EachMovieSetUp from './Components/Pages/EachMovieSetUp.js';
 import EachTheaters from './Components/Pages/EachTheaters.js';
 import SittingArrangeMent from './Components/Pages/SittingArrangeMent.js';
 import MoviesInCities from './Components/Pages/MoviesInCities.js';
-import CheckingBook from './Components/Pages/CheckingBook.js';
+// import CheckingBook from './Components/Pages/CheckingBook.js';
 import SucessPage from './Components/Pages/SucessPage.js';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios'
+import Canc from './Canc.js';
+
 
 
 
@@ -24,7 +26,7 @@ export const Loginboolean = createContext("");
 function App() {
   const location = useLocation();
 
-  const hiddenpath = ["/movieone/theaterone/sitting", "/movieone/sitting", "/login", "/signup", "/movieone/sitting/checking", "/movieone/theaterone/sitting/checking", "/movieone/theaterone/sitting/checking/success", "/movieone/sitting/checking/success"];
+  const hiddenpath = ["/movieone/theaterone/sitting", "/movieone/sitting", "/login", "/signup", "/movieone/sitting/checking", "/movieone/theaterone/sitting/checking", "/movieone/theaterone/sitting/checking/success", "/movieone/sitting/checking/success", "/success", "/cancel"];
 
 
   const [movieslist, setMoviesList] = useState([]);
@@ -40,6 +42,7 @@ function App() {
 
   // backend URL
   let backendURL = "https://movieticketbackend-tpdo.onrender.com";
+  // let backendURL = "http://localhost:4000"
   // Default data
   useEffect(() => {
     axios.get(backendURL)
@@ -147,10 +150,15 @@ function App() {
               <Route path="/movieone/theaterone" element={<EachTheaters />} />
               <Route path="/movieone/sitting" element={<SittingArrangeMent />} />
               <Route path="/movieone/theaterone/sitting" element={<SittingArrangeMent />} />
-              <Route path="/movieone/sitting/checking" element={<CheckingBook />} />
+              {/* <Route path="/movieone/sitting/checking" element={<CheckingBook />} />
               <Route path="/movieone/theaterone/sitting/checking" element={<CheckingBook />} />
               <Route path="/movieone/sitting/checking/success" element={<SucessPage />} />
-              <Route path="/movieone/theaterone/sitting/checking/success" element={<SucessPage />} />
+              <Route path="/movieone/theaterone/sitting/checking/success" element={<SucessPage />} /> */}
+
+
+              <Route path='/success' element={<SucessPage />} />
+              <Route path='/cancel' element={<Canc />} />
+
             </Routes>
           </Moviesdata.Provider>
         </Locationcontext.Provider>
