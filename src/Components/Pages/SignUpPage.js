@@ -11,6 +11,7 @@ function SignUpPage() {
 
     const [formData, setFormdata] = useState({
         name: '',
+        email: '',
         phone: '',
         password: ''
     })
@@ -23,7 +24,7 @@ function SignUpPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!formData.name || !formData.phone || !formData.password) {
+        if (!formData.name || !formData.phone || !formData.password || !formData.email) {
             alert("Please fill the Below Form Correctly.");
             return;
         }
@@ -34,12 +35,14 @@ function SignUpPage() {
             localStorage.setItem("token", response.data.token);
             setFormdata({
                 name: '',
+                email: '',
                 phone: '',
                 password: ''
             })
             navigate("/")
             alert("Successfully SignUp. Thankyou.");
 
+            // console.log(formData)
 
         } catch (e) {
             alert("Signup failed. Please try again.");
@@ -58,7 +61,7 @@ function SignUpPage() {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="logincenter">
-                    <div className="loginForm">
+                    <div className="loginForm signupform">
                         <h3 className='logtext'>Sign<span className='ms-1'>up</span></h3>
                         <p className='accountcreating d-flex'>Already Have An Account ? <Link to="/login"><span className='ms-2 creteaccount'>Login here</span></Link></p>
 
@@ -66,6 +69,10 @@ function SignUpPage() {
                             <div className='singleinputfield singleinputfield1'>
                                 <label htmlFor="name">Username </label>
                                 <input type="text" name='name' placeholder='Username' onChange={handleChange} />
+                            </div>
+                            <div className='singleinputfield singleinputfield1'>
+                                <label htmlFor="email">Email </label>
+                                <input type="email" name='email' placeholder='Email' onChange={handleChange} />
                             </div>
                             <div className='singleinputfield singleinputfield1'>
                                 <label htmlFor="phone">Phone Number</label>

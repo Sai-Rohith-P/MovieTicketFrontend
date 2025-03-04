@@ -13,6 +13,8 @@ function SuccessFul() {
     // const { count } = useContext(Moviesdata);
     const [count, setCount] = useState(null);
 
+    const username = localStorage.getItem("username");
+
     useEffect(() => {
         const storedData = localStorage.getItem("moviedatadetails");
         if (storedData) {
@@ -20,7 +22,42 @@ function SuccessFul() {
         }
     }, []);
 
-    console.log(count);
+    // console.log(count);
+
+    useEffect(() => {
+
+        const sendTicketData = async () => {
+            if (!count) {
+                return;
+            }
+
+            const body = {
+                username: username,
+                products: count
+            }
+            console.log(body);
+            const headers = {
+                "Content-type": "application/json"
+            }
+
+            try {
+                const response = await fetch("https://movieticketbackend-tpdo.onrender.com/success", {
+                    method: "POST",
+                    headers: headers,
+                    body: JSON.stringify(body)
+                });
+                if (!response.ok) {
+                    console.error("Failed to send ticket data.");
+                }
+            } catch (error) {
+                console.error("Error sending ticket data:", error);
+            }
+        }
+        sendTicketData();
+    }, [count, username])
+
+
+
     return (
         <>
             {count ? (<div className="successpage">

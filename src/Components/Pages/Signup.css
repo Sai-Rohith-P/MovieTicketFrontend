@@ -1,3 +1,7 @@
 .singleinputfield1{
-    margin-top: 9px;
+    margin-top: 5px;
+}
+.signupform{
+    padding: 32px !important;
+    width: 430px !important;
 }

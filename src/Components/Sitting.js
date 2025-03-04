@@ -14,6 +14,9 @@ function Sitting() {
     const { moviesittingone, setCount } = useContext(Moviesdata);
     // console.log(moviesittingone);
     const { count } = useContext(Moviesdata);
+
+
+
     useEffect(() => {
         if (count) {
             localStorage.setItem("moviedatadetails", JSON.stringify(count));
